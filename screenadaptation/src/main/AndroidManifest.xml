@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.demo.screen">
+
+    <application
+        >
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.2"/>
+        <!--小米手机开启刘海适配-->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape"/>
+        <!--华为手机开启刘海适配-->
+
+
+        <activity android:name=".ScreenMainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+
+        </activity>
+        <activity android:name=".ScreenAdaptationActivity"
+
+            android:screenOrientation="portrait">
+            <meta-data android:name="android.notch_support" android:value="true"/>
+        </activity>
+    </application>
+
+</manifest>
